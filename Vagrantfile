@@ -10,7 +10,6 @@ $init_script = <<SCRIPT
     apt-add-repository ppa:ondrej/php5 && apt-get update
     apt-get install -y php5 php5-curl php5-mcrypt php5-mysql php5-intl php5-gd
     curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
-    apt-get install -y postfix
 SCRIPT
 
 $project_home = "/home/vagrant/project"
