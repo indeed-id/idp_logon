@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Indeed</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="body body__page">
+
+<div class="logo body__logo"></div>
+
+<div class="body__main">
+    <div class="main">
+        <div class="main__title">Аутентификация</div>
+        <div class="main__tabs tabs">
+            <div class="tabs__head">
+                <a class="tabs__bookmark tabs__bookmark_active" href="#card">AirKey смарт-карта</a>
+                <a class="tabs__bookmark" href="#online">AirKey онлайн</a>
+                <a class="tabs__bookmark" href="#password">AirKey одноразовый пароль</a>
+            </div>
+            <div class="tabs__body">
+                <div class="tabs__tab tabs__tab_card tabs__tab_active">
+
+                    <div class="plugin">
+                        <div class="plugin__title">Установка плагина для вашего браузера</div>
+                        <div class="plugin__text">
+                            Для корректной работы вашего браузера необходимо установить плагин. Загрузка начнется
+                            автоматически. <br>Если загрузка не началась, установите плагин вручную.
+                        </div>
+                        <div class="plugin__table table">
+                            <div class="table__row table__row_head">
+                                <div class="table__cell table__cell_head">Операционная система</div>
+                                <div class="table__cell table__cell_head">Плагин</div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">
+                                    <div class="plugin__name">Microsoft Windows XP/Vista/7/2003R2/2008/2008R2/8/2012,
+                                                              32-bit
+                                    </div>
+                                </div>
+                                <div class="table__cell"><a href="/" class="plugin__link">scplugin-1.0.1.msi</a></div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">
+                                    <div class="plugin__name">Microsoft Windows XP/Vista/7/2003R2/2008/2008R2/8/2012,
+                                                              32-bit
+                                    </div>
+                                </div>
+                                <div class="table__cell"><a href="/" class="plugin__link">scplugin-1.0.1.msi</a></div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">
+                                    <div class="plugin__name">
+                                        Apple Mac OS X 10.5, 10.6, 10.7, 10.8, 10.9, 10.10
+                                    </div>
+                                </div>
+                                <div class="table__cell"><a href="/" class="plugin__link">scplugin-1.0.1.pkg</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key">
+                        <img src="/images/key.jpg" class="key__icon"/>
+
+                        <div class="key__title">Подключите AirKey, смарт-карту или USB-ключ</div>
+                    </div>
+
+                    <div class="auth">
+                        <div class="auth__users">
+                            <a href="#" class="auth__user">ivan.ivanov@office365.com</a>
+                            <a href="#" class="auth__user">administrator@office365.com</a>
+                        </div>
+                        <div class="auth__title">Уточните, под какой учетной записью вы планируете аутентифицироваться
+                        </div>
+                    </div>
+
+                    <div class="auth">
+                        <div class="auth__users">
+                            <a href="#" class="auth__user">ivan.ivanov@office365.com</a>
+                        </div>
+                        <form action="" class="auth__pin">
+                            <input type="text" class="input auth__input" placeholder="Введите PIN-код"/>
+                            <input type="submit" class="button auth__button" value=">>"/>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="tabs__tab tabs__tab_online">
+                    <div class="online">
+                        <div class="online__title">Аутентификация при помощи технологии “AirKey онлайн” требует, чтобы
+                                                   ваш смартфон был подключен к сети Интернет. <br/>Если Интернет
+                                                   отсутствует, используйте технологию “AirKey одноразовый пароль”.
+                        </div>
+                        <img src="/images/qr.jpg" class="online__qr"/>
+
+                        <div class="online__note">Запустите приложение AirKey на смартфоне, отсканируйте QR-код и <br/>дождитесь
+                                                  завершения процедуры
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__tab tabs__tab_password">
+                    <div class="password">
+                        <form class="password__form">
+                            <div class="password__top">
+                                <input type="text"
+                                       class="input password__input"
+                                       placeholder="Введите email или номер телефона"/>
+                                <input type="submit"
+                                       class="button button_disabled password__button"
+                                       value="Далее >>"
+                                       disabled="disabled"/>
+                            </div>
+                            <!-- password__body_disabled -->
+                            <div class="password__body ">
+                                <div class="password__left">
+                                    <img src="/images/qr.jpg" class="password__qr"/>
+
+                                    <div class="qrField password__field">
+                                        <div class="qrField__wrap">
+                                            <input type="text" class="qrField__input" value="" maxlength="4"/>
+
+                                            <div class="qrField__error">Неверное значение. Повторите ввод пароля</div>
+                                        </div>
+                                    </div>
+                                    <div class="password__time">04:32</div>
+                                </div>
+                                <div class="password__right">
+                                    <ol class="list password__list">
+                                        <li class="list__item">Запустите приложение AirKey на смартфоне</li>
+                                        <li class="list__item">Отсканируйте QR-код</li>
+                                        <li class="list__item">Введите полученные 4 цифры</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.idea
+.project
+.svn
+
+/.vagrant/
+/Vagrantfile.local
+recipes/cookbooks/
+recipes/tmp/
+
+/chef.tar.gz
+.chef/*

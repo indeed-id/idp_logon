@@ -1,0 +1,432 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
+
+img {
+    border: 0;
+}
+
+.wrapper {
+    width:  960px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear:   both;
+}
+
+.body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:   21px;
+}
+
+.body__page {
+    margin:  0 auto;
+    width:   1024px;
+    padding: 0 0 40px;
+}
+
+.body__logo {
+    float:      right;
+    margin:     36px 0 0;
+    width:      165px;
+    height:     43px;
+    background: url('../images/logo.png') no-repeat;
+}
+
+.body__main {
+    clear:   both;
+    padding: 80px 0 0;
+}
+
+.main__title {
+    font-size:     50px;
+    padding-left:  56px;
+    position:      relative;
+    border-bottom: 1px solid #969696;
+}
+
+.main__title:after {
+    position:   absolute;
+    content:    '';
+    display:    block;
+    left:       0;
+    right:      auto;
+    top:        5px;
+    bottom:     auto;
+    width:      32px;
+    height:     48px;
+    background: url('../images/sprite.png') no-repeat 0 0;
+    z-index:    1;
+}
+
+.main__tabs {
+    margin: 30px 0 0;
+}
+
+.tabs__head {
+    padding:  0 0 28px;
+    overflow: hidden;
+    position: relative;
+    margin:   0 -16px;
+}
+
+.tabs__bookmark {
+    border:          1px solid #969696;
+    float:           left;
+    display:         inline-block;
+    text-decoration: none;
+    padding:         16px 0 14px;
+    color:           #000000;
+    margin:          0 16px;
+    text-align:      center;
+    width:           318px;
+}
+
+.tabs__bookmark_active,
+.tabs__bookmark:hover {
+    background: #608de0;
+    color:      #ffffff;
+}
+
+.tabs__body {
+    border:     1px solid #969696;
+    padding:    35px 50px;
+    min-height: 450px;
+}
+
+.tabs__tab {
+    display: none;
+}
+
+.tabs__tab_active {
+    display: block;
+}
+
+.plugin {
+    max-width: 800px;
+}
+
+.plugin__title {
+    font-size: 30px;
+}
+
+.plugin__text {
+    padding: 20px 0;
+}
+
+.plugin__table {
+    margin: 5px 0 0;
+}
+
+.plugin__name {
+    white-space: nowrap;
+}
+
+.plugin__link {
+    color:           #608de0;
+    text-decoration: none;
+}
+
+.plugin__link:hover {
+    color: #2457b6;
+}
+
+.table {
+    display: table;
+    width:   100%;
+}
+
+.table__row {
+    display: table-row;
+}
+
+.table__cell {
+    display: table-cell;
+    padding: 2px 0;
+}
+
+.table__cell_head {
+    font-size: 24px;
+}
+
+.key {
+    text-align: center;
+    padding:    100px 0 0;
+}
+
+.key__title {
+    font-size: 32px;
+    padding:   35px 0 0;
+}
+
+.auth {
+    padding:    100px 0 0;
+    text-align: center;
+}
+
+.auth__users {
+    text-align: center;
+}
+
+.auth__user {
+    display:         inline-block;
+    margin:          0 25px;
+    color:           #9c9c94;
+    text-decoration: none;
+    padding:         155px 0 0;
+    position:        relative;
+}
+
+.auth__user:after {
+    position:   absolute;
+    content:    '';
+    display:    block;
+    left:       50%;
+    right:      auto;
+    top:        0;
+    bottom:     auto;
+    width:      152px;
+    height:     139px;
+    background: url('../images/sprite.png') no-repeat -33px 0;
+    z-index:    1;
+}
+
+.auth__user:after {
+    margin-left: -76px;
+}
+
+.auth__user:hover {
+    color: #696961;
+}
+
+.auth__title {
+    padding:    55px 0 0;
+    font-size:  32px;
+    text-align: center;
+}
+
+.auth__pin {
+    display: inline-block;
+    padding: 35px 0 0;
+}
+
+.auth__input {
+    margin: 0;
+}
+
+.input {
+    display:       inline-block;
+    border:        1px solid #adadad;
+    border-radius: 3px;
+    font-family:   'PT Sans Narrow', sans-serif;
+    font-size:     24px;
+    padding:       8px 25px 6px;
+}
+
+.input:focus {
+    border-color: #7d7d7d;
+    outline:      none;
+}
+
+.button {
+    display:       inline-block;
+    border:        1px solid #adadad;
+    border-radius: 3px;
+    font-family:   'PT Sans Narrow', sans-serif;
+    font-size:     24px;
+    padding:       8px 15px 6px;
+    background:    #ffffff;
+    cursor:        pointer;
+    color:         #e22310;
+}
+
+.button:focus,
+.button:hover {
+    border-color: #7d7d7d;
+    outline:      none;
+}
+
+.button_disabled {
+    color:        #9c9c94;
+    border-color: #9c9c94;
+}
+
+.button_disabled:hover,
+.button_disabled:focus {
+    color:        #9c9c94;
+    border-color: #9c9c94;
+}
+
+.online {
+    text-align: center;
+}
+
+.online__qr {
+    margin: 70px 0 0;
+}
+
+.online__note {
+    padding:   15px 0 0;
+    font-size: 32px;
+}
+
+.password {
+    padding: 10px 0 0;
+}
+
+.password__input {
+    width:        400px;
+    margin-right: 24px;
+}
+
+.password__body {
+    position: relative;
+    padding:  50px 0 0;
+}
+
+.password__body:after {
+    content: '';
+    display: table;
+    clear:   both;
+}
+
+.password__body_disabled:before {
+    position:   absolute;
+    content:    '';
+    display:    block;
+    background: rgba(255, 255, 255, 0.5);
+    left:       0;
+    right:      0;
+    top:        0;
+    bottom:     0;
+    z-index:    10;
+}
+
+.password__left {
+    float:      left;
+    width:      350px;
+    text-align: center;
+}
+
+.password__right {
+    margin-left: 370px;
+}
+
+.password__field {
+    margin: 50px 0 0;
+}
+
+.password__time {
+    color:     #9c9c94;
+    padding:   10px 0 0;
+    font-size: 24px;
+}
+
+.password__list {
+    margin: 40px 0 0 50px;
+}
+
+.qrField {
+    position: relative;
+    padding:  0 0 0 32px;
+}
+
+.qrField:after {
+    display:       block;
+    position:      absolute;
+    z-index:       0;
+    width:         58px;
+    height:        58px;
+    background:    #d8d7d7;
+    content:       '';
+    border-radius: 4px;
+    left:          13px;
+    top:           0;
+}
+
+.qrField:before {
+    display:       block;
+    position:      absolute;
+    z-index:       0;
+    width:         58px;
+    height:        58px;
+    background:    #d8d7d7;
+    content:       '';
+    border-radius: 4px;
+    left:          100px;
+    top:           0;
+}
+
+.qrField__wrap {
+    position: relative;
+}
+
+.qrField__wrap:after {
+    display:       block;
+    position:      absolute;
+    z-index:       0;
+    width:         58px;
+    height:        58px;
+    background:    #d8d7d7;
+    content:       '';
+    border-radius: 4px;
+    left:          153px;
+    top:           0;
+}
+
+.qrField__wrap:before {
+    display:       block;
+    position:      absolute;
+    z-index:       0;
+    width:         58px;
+    height:        58px;
+    background:    #d8d7d7;
+    content:       '';
+    border-radius: 4px;
+    left:          240px;
+    top:           0;
+}
+
+.qrField__input {
+    border:         0;
+    background:     transparent;
+    letter-spacing: 64px;
+    font-size:      48px;
+    line-height:    48px;
+    display:        inline-block;
+    font-family:    'PT Sans Narrow', sans-serif;
+    position:       relative;
+    z-index:        3;
+    margin:         0;
+    padding:        0;
+
+    color:          transparent;
+    text-shadow:    0 0 0 gray;
+
+}
+
+.qrField__input:focus {
+    outline: none;
+}
+
+.qrField__error {
+    color:       #dd2702;
+    font-size:   32px;
+    position:    absolute;
+    white-space: nowrap;
+    right:       -540px;
+    top:         0;
+    width:       500px;
+    line-height: 60px;
+}
+
+.list {
+    font-size: 32px;
+    padding:   0;
+}
+
+.list__item {
+    margin:  0;
+    padding: 0;
+}

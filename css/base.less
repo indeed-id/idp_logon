@@ -1,0 +1,155 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
+
+@white: #fff;
+@black: #000;
+@gray: #969696;
+@light: #9c9c94;
+@blue: #608de0;
+
+@fontFamilyBase: 'PT Sans Narrow', sans-serif;
+
+img {
+    border: 0;
+}
+
+.wrapper {
+    width:  960px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear:   both;
+    }
+}
+
+.icon(@width: 0, @height: 0, @bgPosition: 0 0) {
+    width:      @width;
+    height:     @height;
+    background: url('../images/sprite.png') no-repeat @bgPosition;
+}
+
+.withSprite(@width: 0, @height: 0, @bgPosition: 0 0, @top: 0, @left: 0, @parentPosition: relative, @right: auto, @bottom: auto, @zIndex: 1) {
+    position: @parentPosition;
+
+    &:after {
+        position:   absolute;
+        content:    '';
+        display:    block;
+        left:       @left;
+        right:      @right;
+        top:        @top;
+        bottom:     @bottom;
+        width:      @width;
+        height:     @height;
+        background: url('../images/sprite.png') no-repeat @bgPosition;
+        z-index:    @zIndex;
+    }
+}
+
+.withSprite2(@width: 0, @height: 0, @bgPosition: 0 0, @top: 0, @left: 0, @parentPosition: relative, @right: auto, @bottom: auto, @zIndex: 1) {
+    position: @parentPosition;
+
+    &:before {
+        position:   absolute;
+        content:    '';
+        display:    block;
+        left:       @left;
+        right:      @right;
+        top:        @top;
+        bottom:     @bottom;
+        width:      @width;
+        height:     @height;
+        background: url('../images/sprite.png') no-repeat @bgPosition;
+        z-index:    @zIndex;
+    }
+}
+
+.animation(@type: all, @speedIn: 0.1s, @speedOut: 0s, @effect: linear) {
+    -webkit-transition:          @type @speedIn @effect @speedOut;
+    -moz-transition:             @type @speedIn @effect @speedOut;
+    -o-transition:               @type @speedIn @effect @speedOut;
+    transition:                  @type @speedIn @effect @speedOut;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform:           translateZ(0);
+}
+
+.rotate(@angle: 0) {
+    -moz-transform:    rotate(@angle);
+    -ms-transform:     rotate(@angle);
+    -webkit-transform: rotate(@angle);
+    -o-transform:      rotate(@angle);
+    transform:         rotate(@angle);
+}
+
+.gradient(@top: #fff, @bottom: #000) {
+    background: @top;
+    background: -moz-linear-gradient(top, @top 1%, @bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,@top), color-stop(100%,@bottom));
+    background: -webkit-linear-gradient(top, @top 1%,@bottom 100%);
+    background: -o-linear-gradient(top, @top 1%,@bottom 100%);
+    background: -ms-linear-gradient(top, @top 1%,@bottom 100%);
+    background: linear-gradient(to bottom, @top 1%,@bottom 100%);
+}
+
+.placeholder(@color: #555) {
+    &:-moz-placeholder {
+        color: @color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+}
+
+.closeButton (@dim: 15px, @color: @colorGreen, @position: relative) {
+    display:  block;
+    width:    @dim;
+    height:   @dim;
+    position: @position;
+    border:   2px solid @color;
+    .rotate(45deg);
+
+    &:after {
+        position:   absolute;
+        display:    block;
+        height:     1px;
+        width:      @dim - 4px;
+        content:    '';
+        background: @color;
+        top:        7px;
+        left:       2px;
+    }
+
+    &:before {
+        position:   absolute;
+        display:    block;
+        height:     1px;
+        width:      @dim - 4px;
+        content:    '';
+        background: @color;
+        top:        7px;
+        left:       2px;
+        .rotate(90deg);
+    }
+
+    &:hover {
+        border-color: darken(@color, 15%);
+
+        &:after,
+        &:before {
+            background: darken(@color, 15%);
+        }
+    }
+}
+
+.noSelection() {
+    -webkit-touch-callout: none;
+    -webkit-user-select:   none;
+    -khtml-user-select:    none;
+    -moz-user-select:      none;
+    -ms-user-select:       none;
+    user-select:           none;
+}
