@@ -1,0 +1,305 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.panel-body:before,
+.panel-body:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  clear: both;
+}
+.body {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+.body__page {
+  margin: 0 auto;
+  width: 800px;
+  padding: 0 0 40px;
+}
+.body__wrap {
+  margin: 120px 0 0;
+}
+.wrap {
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  box-shadow: 3px 3px 26px -5px #555555;
+}
+.wrap__head {
+  background: #f5f5f5;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+}
+.wrap__title {
+  text-align: center;
+  font-size: 24px;
+  color: #d4d4d4;
+  line-height: 50px;
+  display: inline-block;
+  position: relative;
+}
+.wrap__title:before {
+  position: absolute;
+  left: -46px;
+  top: 7px;
+  width: 38px;
+  height: 38px;
+  border-radius: 38px;
+  background: #fafafa;
+  content: '';
+  display: block;
+}
+.wrap__title:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: -35px;
+  right: auto;
+  top: 16px;
+  bottom: auto;
+  width: 17px;
+  height: 19px;
+  background: url('../images/sprite.png') no-repeat 0 0;
+  z-index: 1;
+}
+.wrap__logo {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.wrap__left {
+  width: 150px;
+  float: left;
+  border-right: 1px solid #dedede;
+  position: relative;
+  z-index: 1;
+}
+.wrap__main {
+  margin-left: 151px;
+  box-shadow: -1px 0 0 0 #dedede;
+  position: relative;
+  min-height: 400px;
+  z-index: 0;
+}
+.wrap__tabs {
+  margin: 0 -1px;
+  position: relative;
+}
+.tabs {
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #dedede;
+}
+.tabs__item {
+  padding: 0;
+  margin: 0;
+}
+.tabs__link {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 50px 0 10px;
+  text-decoration: none;
+  color: #434343;
+  text-align: center;
+  display: block;
+  border: 1px solid #dedede;
+  position: relative;
+  -webkit-transition: all 0.1s linear 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-animation: all;
+  -o-animation: all;
+  animation: all;
+}
+.tabs__link:hover {
+  background: #dedede;
+}
+.tabs__link_smart {
+  position: relative;
+}
+.tabs__link_smart:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+  width: 26px;
+  height: 26px;
+  background: url('../images/sprite.png') no-repeat -47px -1px;
+  z-index: 1;
+}
+.tabs__link_smart:before {
+  margin: -22px 0 0 -13px;
+}
+.tabs__link_online {
+  position: relative;
+}
+.tabs__link_online:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+  width: 33px;
+  height: 31px;
+  background: url('../images/sprite.png') no-repeat -108px 0;
+  z-index: 1;
+}
+.tabs__link_online:before {
+  margin: -27px 0 0 -13px;
+}
+.tabs__link_offline {
+  position: relative;
+}
+.tabs__link_offline:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+  width: 26px;
+  height: 26px;
+  background: url('../images/sprite.png') no-repeat -169px -1px;
+  z-index: 1;
+}
+.tabs__link_offline:before {
+  margin: -22px 0 0 -13px;
+}
+.tabs__item_active .tabs__link {
+  background: #5f5ca4;
+  color: #ffffff;
+  border-color: #4c90ca;
+}
+.tabs__item_active .tabs__link:after {
+  position: absolute;
+  right: -10.5px;
+  z-index: 3;
+  top: 50%;
+  margin-top: -12.5px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12.5px 0 12.5px 11px;
+  border-color: transparent transparent transparent #5f5ca4;
+}
+.tabs__item_active .tabs__link_smart:before {
+  background-position: -20px -1px;
+}
+.tabs__item_active .tabs__link_online:before {
+  background-position: -74px 0px;
+}
+.tabs__item_active .tabs__link_offline:before {
+  background-position: -142px 0px;
+}
