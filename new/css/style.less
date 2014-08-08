@@ -81,6 +81,14 @@
 		margin: 0 -1px;
 		position: relative;
 	}
+
+	&__tab{
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
 }
 
 .tabs{
@@ -132,7 +140,7 @@
 	}
 
 	&__item{
-		&_active{
+		&.active{
 			.tabs{
 				&__link{
 					.active_link;

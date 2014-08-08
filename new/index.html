@@ -18,19 +18,19 @@
 		<div class="wrap__body">
 			<div class="wrap__left">
 				<ul class="wrap__tabs tabs" role="tablist">
-					<li class="tabs__item tabs__item_active">
-						<a href="#home" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
+					<li class="tabs__item active">
+						<a href="#offline" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#profile" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
+						<a href="#card" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
+						<a href="#pin" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
 					</li>
 				</ul>
 			</div>
 			<div class="wrap__main">
-				<div class="offline" style="display: none;">
+				<div class="offline wrap__tab active" id="offline">
 					<div class="offline__top">
 						<form action="" class="offline__form form">
 							<input type="email" class="form__input" placeholder="E-mail" />
@@ -56,18 +56,18 @@
 					</div>
 				</div>
 
-				<div class="card" style="display: none;">
+				<div class="card wrap__tab" id="card">
 					<img src="images/card.png" class="card__logo" />
 					<div class="card__title title">Connect AirKey, smart card or USB token</div>
 				</div>
 
-				<div class="online" style="display: none;">
+				<div class="online wrap__tab">
 					<img src="images/qr.jpg" class="online__qr" />
 					<div class="online__title title">Launch AirKey application on your smartphone,<br />
 scan QR code and wait till the procedure is completed</div>
 				</div>
 
-				<div class="pin" style="display: none;">
+				<div class="pin wrap__tab" id="pin">
 					<div class="pin__user user">
 						<img src="images/person.png" class="user__img" />
 						<div class="user__email">ivan.ivanov@office365.com</div>
@@ -80,7 +80,7 @@ scan QR code and wait till the procedure is completed</div>
 					</form>
 				</div>
 
-				<div class="account">
+				<div class="account wrap__tab">
 					<div class="account__wrap">
 						<div class="account__user user">
 							<img src="images/person.png" class="user__img" />
@@ -105,5 +105,6 @@ scan QR code and wait till the procedure is completed</div>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/retina.min.js"></script>
 </body>
 </html>
