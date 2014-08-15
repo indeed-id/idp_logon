@@ -52,7 +52,10 @@ img {
 		background-repeat: no-repeat;
 	}
 
-	@media(@retina){
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5){
 		&:after{
 			background-image: url("../images/sprite@2x.png");
 		}
@@ -79,14 +82,15 @@ img {
 		background-repeat: no-repeat;
 	}
 
-	@media(@retina){
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5){
 		&:before{
 			background-image: url("../images/sprite@2x.png");
 		}
 	}
 }
-
-@retina: ~'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)';
 
 
 .animation(@type: all, @speedIn: 0.1s, @speedOut: 0s, @effect: linear) {

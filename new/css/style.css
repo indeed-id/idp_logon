@@ -167,7 +167,7 @@
   background-size: 279px 47px;
   background-repeat: no-repeat;
 }
-@media (only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .wrap__title:after {
     background-image: url("../images/sprite@2x.png");
   }
@@ -253,7 +253,7 @@
   background-size: 279px 47px;
   background-repeat: no-repeat;
 }
-@media (only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .tabs__link_smart:before {
     background-image: url("../images/sprite@2x.png");
   }
@@ -280,7 +280,7 @@
   background-size: 279px 47px;
   background-repeat: no-repeat;
 }
-@media (only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .tabs__link_online:before {
     background-image: url("../images/sprite@2x.png");
   }
@@ -307,7 +307,7 @@
   background-size: 279px 47px;
   background-repeat: no-repeat;
 }
-@media (only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .tabs__link_offline:before {
     background-image: url("../images/sprite@2x.png");
   }
@@ -452,7 +452,7 @@ textarea.form__input {
   background-size: 279px 47px;
   background-repeat: no-repeat;
 }
-@media (only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .form__btn:after {
     background-image: url("../images/sprite@2x.png");
   }
@@ -485,6 +485,7 @@ textarea.form__input {
   text-indent: -9999px;
   margin: 0;
   width: 45px;
+  -webkit-appearance: none;
 }
 .form__button:hover,
 .form__button:focus,
