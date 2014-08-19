@@ -120,21 +120,21 @@
 		}
 
 		&_smart{
-			.withSprite2(26px, 26px, -47px -1px, 50%, 50%);
+			.tabIcon(26px, 26px, '../images/icon__smart-card.svg', 50%, 50%);
 			&:before{
 				margin: -22px 0 0 -13px;
 			}
 		}
 
 		&_online{
-			.withSprite2(33px, 31px, -108px 0, 50%, 50%);
+			.tabIcon(33px, 31px, '../images/icon__online.svg', 50%, 50%);
 			&:before{
 				margin: -27px 0 0 -13px;
 			}
 		}
 
 		&_offline{
-			.withSprite2(26px, 26px, -169px -1px, 50%, 50%);
+			.tabIcon(26px, 26px, '../images/icon__offline.svg', 50%, 50%);
 			&:before{
 				margin: -22px 0 0 -13px;
 			}
@@ -186,19 +186,19 @@
 
 	.active_link_smart(){
 		&:before{
-			background-position: -20px -1px;
+			background-image: url(../images/icon__smart-card_active.svg);
 		}
 	}
 
 	.active_link_online(){
 		&:before{
-			background-position: -74px 0px;
+			background-image: url(../images/icon__online_active.svg);
 		}
 	}
 
 	.active_link_offline(){
 		&:before{
-			background-position: -142px 0px;
+			background-image: url(../images/icon__offline_active.svg);
 		}
 	}
 }
