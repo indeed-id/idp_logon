@@ -143,4 +143,51 @@
             targetPage: '.account__page_pin',
             hiddenClass: 'account__page_hidden'
         });
+
+    $('.offline__form').on('submit', function(e) {
+        e.preventDefault();
+        var url = e.target.action;
+
+        $.get(url).then(function() {
+            $('.offline__otp').removeAttr('disabled');
+            $('.offline__body').removeClass('offline__body_hidden');
+        });
+    });
+
+    $('.form__input').on('focus', function(e) {
+        $('.offline__otp')
+            .attr('disabled', 'disabled')
+            .val('');
+        $('.offline__body').addClass('offline__body_hidden');
+    });
+
+    function checkOtp() {
+        var filled = true;
+
+        $('.offline__otp').each(function(idx, elem) {
+            if ($(elem).val().length === 0) {
+                filled = false;
+            }
+        });
+
+        if (filled) {
+            var url = $('.offline__otp-form').attr('action');
+            $.get(url).then(function() {
+                console.log('submitted');
+            });
+        }
+    }
+
+    $('.offline__otp').on('input', function(e) {
+        var $target = $(e.target);
+
+        if ($target.val().length >= 1) {
+            if ($target.is(":last-child")) {
+                checkOtp();
+            } else {
+                $target.next().focus();
+            }
+        }
+        console.log($(e.target).is(':last-child'));
+    });
 })(window, document, jQuery, undefined);

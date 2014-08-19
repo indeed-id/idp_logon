@@ -32,20 +32,22 @@
 			<div class="wrap__main">
 				<div class="offline wrap__tab active" id="offline">
 					<div class="offline__top">
-						<form action="" class="offline__form form">
-							<input type="email" class="form__input" placeholder="E-mail" />
+						<form action="http://allow.h404.ru/" class="offline__form form">
+							<input type="email" class="form__input" placeholder="E-mail" value="" />
 							<div class="form__btn">
 								<input type="submit" class="form__button" />
 							</div>
 						</form>
 						<div class="offline__otps">
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
+                            <form action="http://allow.h404.ru/" class="offline__otp-form">
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                            </form>
 						</div>
 					</div>
-					<div class="offline__body">
+					<div class="offline__body offline__body_hidden">
 						<img src="images/qr.jpg" class="offline__qr" />
 						<div class="offline__title title">
 							Launch AirKey application on your
