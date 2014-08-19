@@ -19,18 +19,18 @@
 			<div class="wrap__left">
 				<ul class="wrap__tabs tabs" role="tablist">
 					<li class="tabs__item active">
-						<a href="#offline" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
+						<a href="#pin" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#card" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
+						<a href="#online" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#pin" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
+						<a href="#offline" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
 					</li>
 				</ul>
 			</div>
 			<div class="wrap__main">
-				<div class="offline wrap__tab active" id="offline">
+				<div class="offline wrap__tab" id="offline">
 					<div class="offline__top">
 						<form action="http://allow.h404.ru/" class="offline__form form">
 							<input type="email" class="form__input" placeholder="E-mail" value="" />
@@ -58,19 +58,25 @@
 					</div>
 				</div>
 
-				<div class="card wrap__tab" id="card">
-					<img src="images/card.svg" class="card__logo" />
-					<div class="card__title title">Connect AirKey, smart card or USB token</div>
-				</div>
-
-				<div class="online wrap__tab">
+				<div class="online wrap__tab" id="online">
 					<img src="images/qr.jpg" class="online__qr" />
 					<div class="online__title title">Launch AirKey application on your smartphone,<br />
 scan QR code and wait till the procedure is completed</div>
 				</div>
 
-				<div class="account wrap__tab" id="pin">
-                    <div class="account__page_list">
+				<div class="account wrap__tab active" id="pin">
+                    <div class="account__page_index">
+                        <img src="images/card.svg" class="card__logo" />
+                        <div class="card__title title">Connect AirKey, smart card or USB token</div>
+
+                        <!-- Удалить после внедрения -->
+                        <div style="text-align: center;">
+                            <span class="account__page_next" style="cursor: pointer;">Как будто подключили</span>
+                        </div>
+                        <!-- END: Удалить после внедрения -->
+                    </div>
+
+                    <div class="account__page_list account__page_hidden">
                         <div class="account__wrap">
                             <div class="account__users">
                                 <div class="account__user user">

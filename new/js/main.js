@@ -144,6 +144,11 @@
             hiddenClass: 'account__page_hidden'
         });
 
+    $('.account__page_next').on('click', function(e) {
+        $('.account__page_index').addClass('account__page_hidden');
+        $('.account__page_list').removeClass('account__page_hidden');
+    });
+
     $('.offline__form').on('submit', function(e) {
         e.preventDefault();
         var url = e.target.action;
