@@ -343,7 +343,7 @@
 	}
 
 	&__email{
-		font-size: 19px;
+		font-size: 16px;
 		color: @black;
 		padding: 12px 0 0;
 	}
@@ -359,6 +359,11 @@
 		margin: 0 auto;
 		position: relative;
 	}
+
+    &__users {
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
 	&__control{
 		position: absolute;
@@ -389,14 +394,11 @@
 	}
 
 	&__user{
-		float: right;
-		cursor: pointer;
 		position: relative;
+        display: inline-block;
+        width: 240px;
+		cursor: pointer;
 		z-index: 1;
-
-		&:first-child{
-			float: left;
-		}
 	}
 
 	&__title{

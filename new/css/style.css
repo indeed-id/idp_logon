@@ -560,7 +560,7 @@ fieldset[disabled] .form__button {
   height: 165px;
 }
 .user__email {
-  font-size: 19px;
+  font-size: 16px;
   color: #434343;
   padding: 12px 0 0;
 }
@@ -598,6 +598,10 @@ fieldset[disabled] .form__button {
 .account__wrap:after {
   clear: both;
 }
+.account__users {
+  overflow: hidden;
+  white-space: nowrap;
+}
 .account__control {
   position: absolute;
   z-index: 0;
@@ -634,13 +638,11 @@ fieldset[disabled] .form__button {
   opacity: 0.7;
 }
 .account__user {
-  float: right;
-  cursor: pointer;
   position: relative;
+  display: inline-block;
+  width: 240px;
+  cursor: pointer;
   z-index: 1;
-}
-.account__user:first-child {
-  float: left;
 }
 .account__title {
   padding: 40px 0 0;
