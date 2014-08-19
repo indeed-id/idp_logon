@@ -97,6 +97,7 @@
 	border-bottom: 1px solid @light;
 
 	&__item{
+        min-height: 76px;
 		padding: 0;
 		margin: 0;
 	}
@@ -246,19 +247,24 @@
 }
 
 .form{
+    font-size: 0;
+    white-space: nowrap;
 
 	&__input{
 		.form-control;
+        font-size: 14px;
 		box-sizing: border-box;
-		float: left;
+		display: inline-block;
 		width: 230px;
+        vertical-align: middle;
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
 	}
 
 	&__btn{
-		float: left;
 		.withSprite(6px, 11px, -200px 0, 50%, 50%);
+        display: inline-block;
+        vertical-align: middle;
 		&:after{
 			margin: -5.5px 0 0 -3px;
 		}

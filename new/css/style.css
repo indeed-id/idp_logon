@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
 .dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
@@ -208,6 +207,7 @@
   border-bottom: 1px solid #dedede;
 }
 .tabs__item {
+  min-height: 76px;
   padding: 0;
   margin: 0;
 }
@@ -377,12 +377,15 @@
   color: #5f5ca4;
   font-size: 22px;
 }
+.form {
+  font-size: 0;
+  white-space: nowrap;
+}
 .form__input {
   display: block;
   width: 100%;
   height: 34px;
   padding: 6px 12px;
-  font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
   background-color: #ffffff;
@@ -394,9 +397,11 @@
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  font-size: 14px;
   box-sizing: border-box;
-  float: left;
+  display: inline-block;
   width: 230px;
+  vertical-align: middle;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -433,8 +438,9 @@ textarea.form__input {
   height: auto;
 }
 .form__btn {
-  float: left;
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 .form__btn:after {
   position: absolute;
