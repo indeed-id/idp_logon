@@ -120,8 +120,9 @@
   margin: 120px 0 0;
 }
 .wrap {
-  border: 1px solid #dedede;
-  border-radius: 3px;
+  overflow: hidden;
+  border: 2px solid #dedede;
+  border-radius: 6px;
   box-shadow: 3px 3px 26px -5px #555555;
 }
 .wrap__head {
@@ -523,6 +524,8 @@ fieldset[disabled] .form__button {
   padding: 45px 0 0;
 }
 .card__logo {
+  width: 192px;
+  height: 192px;
   display: block;
   margin: 0 auto;
 }
@@ -551,6 +554,10 @@ fieldset[disabled] .form__button {
 }
 .user {
   text-align: center;
+}
+.user__img {
+  width: 147px;
+  height: 165px;
 }
 .user__email {
   font-size: 19px;
