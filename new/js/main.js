@@ -84,15 +84,63 @@
         });
     };
 
+    var pageChooserDefaults = {
+        handler: '.handler',
+        listPage: '.list',
+        targetPage: '.target',
+        hiddenClass: 'hidden'
+    };
+
+    $.PageChooser = function($root, options) {
+        this.params = options;
+        this.$handler = $root.find(options.handler);
+        this.$listPage = $root.find(options.listPage);
+        this.$targetPage = $root.find(options.targetPage);
+
+        this.init = function() {
+            this._bind();
+        };
+
+        this._bind = function() {
+            this.$handler.on('click', $.proxy(this._showPinPage, this));
+        };
+
+        this._showPinPage = function() {
+            this.$listPage.addClass(this.params.hiddenClass);
+            this.$targetPage.removeClass(this.params.hiddenClass);
+        }
+    };
+
+    $.fn.pageChooser = function(options) {
+        return this.each(function() {
+            var $item = $(this);
+            var itemData = $item.data();
+            var instanceOpts = $.extend(
+                {},
+                pageChooserDefaults,
+                options,
+                itemData
+            );
+
+            return new $.PageChooser($item, instanceOpts).init();
+        });
+    };
+
     $('.account').carousel({
-        container: '.account__users',
-        controls: {
-            container: '.account__control',
-            prev: '.account__arrow_prev',
-            next: '.account__arrow_next',
-            disabledClass: 'account__arrow_disabled'
-        },
-        item: '.account__user',
-        itemsToShow: 2
-    })
+            container: '.account__users',
+            controls: {
+                container: '.account__control',
+                prev: '.account__arrow_prev',
+                next: '.account__arrow_next',
+                disabledClass: 'account__arrow_disabled'
+            },
+            item: '.account__user',
+            itemsToShow: 2
+        })
+        .pageChooser({
+            handler: '.account__user',
+            listPage: '.account__page_list',
+            targetPage: '.account__page_pin',
+            hiddenClass: 'account__page_hidden'
+        });
 })(window, document, jQuery, undefined);

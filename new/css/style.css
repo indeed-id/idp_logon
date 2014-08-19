@@ -524,7 +524,6 @@ fieldset[disabled] .form__button {
   text-align: center;
 }
 .pin {
-  padding: 45px 0 0;
   text-align: center;
 }
 .pin__form {
@@ -630,4 +629,7 @@ fieldset[disabled] .form__button {
 .account__title {
   padding: 40px 0 0;
   text-align: center;
+}
+.account__page_hidden {
+  display: none;
 }
