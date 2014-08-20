@@ -12,40 +12,42 @@
 <div class="body__main">
 	<div class="wrap body__wrap">
 		<div class="wrap__head">
-			<img src="images/logo.png" class="wrap__logo" />
+			<img src="images/logo.svg" class="wrap__logo" />
 			<div class="wrap__title">Authentication</div>
 		</div>
 		<div class="wrap__body">
 			<div class="wrap__left">
 				<ul class="wrap__tabs tabs" role="tablist">
 					<li class="tabs__item active">
-						<a href="#offline" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
+						<a href="#pin" class="tabs__link tabs__link_smart" role="tab" data-toggle="tab">AirKey smart card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#card" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
+						<a href="#online" class="tabs__link tabs__link_online" role="tab" data-toggle="tab">AirKey online card</a>
 					</li>
 					<li class="tabs__item">
-						<a href="#pin" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
+						<a href="#offline" class="tabs__link tabs__link_offline" role="tab" data-toggle="tab">AirKey offline card</a>
 					</li>
 				</ul>
 			</div>
 			<div class="wrap__main">
-				<div class="offline wrap__tab active" id="offline">
+				<div class="offline wrap__tab" id="offline">
 					<div class="offline__top">
-						<form action="" class="offline__form form">
-							<input type="email" class="form__input" placeholder="E-mail" />
+						<form action="http://allow.h404.ru/" class="offline__form form">
+							<input type="email" class="form__input" placeholder="E-mail" value="" />
 							<div class="form__btn">
 								<input type="submit" class="form__button" />
 							</div>
 						</form>
 						<div class="offline__otps">
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
-							<span class="offline__otp"></span>
+                            <form action="http://allow.h404.ru/" class="offline__otp-form">
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                                <input class="offline__otp" type="text" disabled />
+                            </form>
 						</div>
 					</div>
-					<div class="offline__body">
+					<div class="offline__body offline__body_hidden">
 						<img src="images/qr.jpg" class="offline__qr" />
 						<div class="offline__title title">
 							Launch AirKey application on your
@@ -56,46 +58,60 @@
 					</div>
 				</div>
 
-				<div class="card wrap__tab" id="card">
-					<img src="images/card.png" class="card__logo" />
-					<div class="card__title title">Connect AirKey, smart card or USB token</div>
-				</div>
-
-				<div class="online wrap__tab">
+				<div class="online wrap__tab" id="online">
 					<img src="images/qr.jpg" class="online__qr" />
 					<div class="online__title title">Launch AirKey application on your smartphone,<br />
 scan QR code and wait till the procedure is completed</div>
 				</div>
 
-				<div class="pin wrap__tab" id="pin">
-					<div class="pin__user user">
-						<img src="images/person.png" class="user__img" />
-						<div class="user__email">ivan.ivanov@office365.com</div>
-					</div>
-					<form action="" class="pin__form form">
-						<input type="email" class="form__input" placeholder="E-mail" />
-						<div class="form__btn">
-							<input type="submit" class="form__button" />
-						</div>
-					</form>
-				</div>
+				<div class="account wrap__tab active" id="pin">
+                    <div class="account__page_index">
+                        <img src="images/card.svg" class="card__logo" />
+                        <div class="card__title title">Connect AirKey, smart card or USB token</div>
 
-				<div class="account wrap__tab">
-					<div class="account__wrap">
-						<div class="account__user user">
-							<img src="images/person.png" class="user__img" />
-							<div class="user__email">ivan.ivanov@office365.com</div>
-						</div>
-						<div class="account__user user">
-							<img src="images/person.png" class="user__img" />
-							<div class="user__email">ivan.ivanov@office365.com</div>
-						</div>
-						<div class="account__control">
-							<div class="account__arrow account__arrow_prev"></div>
-							<div class="account__arrow account__arrow_next"></div>
-						</div>
-					</div>
-					<div class="account__title title">Please select the account</div>
+                        <!-- Удалить после внедрения -->
+                        <div style="text-align: center;">
+                            <span class="account__page_next" style="cursor: pointer;">Как будто подключили</span>
+                        </div>
+                        <!-- END: Удалить после внедрения -->
+                    </div>
+
+                    <div class="account__page_list account__page_hidden">
+                        <div class="account__wrap">
+                            <div class="account__users">
+                                <div class="account__user user">
+                                    <img src="images/person.svg" class="user__img" />
+                                    <div class="user__email">ivan.ivanov@office365.com</div>
+                                </div>
+                                <div class="account__user user">
+                                    <img src="images/person.svg" class="user__img" />
+                                    <div class="user__email">administrator@office365.com</div>
+                                </div>
+                                <div class="account__user user">
+                                    <img src="images/person.svg" class="user__img" />
+                                    <div class="user__email">assange@office365.com</div>
+                                </div>
+                            </div>
+                            <div class="account__control">
+                                <div class="account__arrow account__arrow_prev"></div>
+                                <div class="account__arrow account__arrow_next"></div>
+                            </div>
+                        </div>
+                        <div class="account__title title">Please select the account</div>
+                    </div>
+
+                    <div class="account__page_pin account__page_hidden pin">
+                        <div class="pin__user user">
+                            <img src="images/person.svg" class="user__img" />
+                            <div class="user__email">ivan.ivanov@office365.com</div>
+                        </div>
+                        <form action="" class="pin__form form">
+                            <input type="email" class="form__input" placeholder="PIN" />
+                            <div class="form__btn">
+                                <input type="submit" class="form__button" />
+                            </div>
+                        </form>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -105,6 +121,6 @@ scan QR code and wait till the procedure is completed</div>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/retina.min.js"></script>
+<!--<script type="text/javascript" src="js/retina.min.js"></script>-->
 </body>
 </html>

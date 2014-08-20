@@ -20,8 +20,9 @@
 
 	@left_w: 150px;
 
-	border: 1px solid @light;
-	border-radius: 3px;
+    overflow: hidden;
+	border: 2px solid @light;
+	border-radius: 6px;
 	box-shadow: 3px 3px 26px -5px @gray;
 
 	&__head{
@@ -42,22 +43,22 @@
 
 		&:before{
 			position: absolute;
-			left: -46px;
+			left: -40px;
 			top: 7px;
-			width: 38px;
-			height: 38px;
-			border-radius: 38px;
-			background: #fafafa;
+			width: 35px;
+			height: 35px;
+			background: url("../images/title.svg") 50% no-repeat;
 			content: '';
 			display: block;
 		}
-		.withSprite(17px, 19px, 0 0, 16px, -35px);
 	}
 
 	&__logo{
 		position: absolute;
 		right: 16px;
 		top: 16px;
+        width: 77px;
+        height: 20px;
 	}
 
 	&__left{
@@ -97,6 +98,7 @@
 	border-bottom: 1px solid @light;
 
 	&__item{
+        min-height: 76px;
 		padding: 0;
 		margin: 0;
 	}
@@ -118,21 +120,21 @@
 		}
 
 		&_smart{
-			.withSprite2(26px, 26px, -47px -1px, 50%, 50%);
+			.tabIcon(26px, 26px, '../images/icon__smart-card.svg', 50%, 50%);
 			&:before{
 				margin: -22px 0 0 -13px;
 			}
 		}
 
 		&_online{
-			.withSprite2(33px, 31px, -108px 0, 50%, 50%);
+			.tabIcon(33px, 31px, '../images/icon__online.svg', 50%, 50%);
 			&:before{
 				margin: -27px 0 0 -13px;
 			}
 		}
 
 		&_offline{
-			.withSprite2(26px, 26px, -169px -1px, 50%, 50%);
+			.tabIcon(26px, 26px, '../images/icon__offline.svg', 50%, 50%);
 			&:before{
 				margin: -22px 0 0 -13px;
 			}
@@ -184,19 +186,19 @@
 
 	.active_link_smart(){
 		&:before{
-			background-position: -20px -1px;
+			background-image: url(../images/icon__smart-card_active.svg);
 		}
 	}
 
 	.active_link_online(){
 		&:before{
-			background-position: -74px 0px;
+			background-image: url(../images/icon__online_active.svg);
 		}
 	}
 
 	.active_link_offline(){
 		&:before{
-			background-position: -142px 0px;
+			background-image: url(../images/icon__offline_active.svg);
 		}
 	}
 }
@@ -204,7 +206,6 @@
 .offline{
 	&__top{
 		padding: 0 0 27px;
-		border-bottom: 1px solid darken(@light, 10%);
 		overflow: hidden;
 	}
 
@@ -217,11 +218,15 @@
 	}
 
 	&__otp{
+		.form-control;
+        box-sizing: border-box;
 		width: 32px;
 		height: 32px;
+        padding: 6px;
 		border: 1px solid @light;
 		border-radius: 3px;
 		display: inline-block;
+        text-align: center;
 		float: left;
 		margin: 0 0 0 7px;
 	}
@@ -229,6 +234,11 @@
 	&__body{
 		overflow: hidden;
 		padding: 30px 0;
+		border-top: 1px solid darken(@light, 10%);
+
+        &_hidden {
+            display: none;
+        }
 	}
 
 	&__qr{
@@ -246,19 +256,24 @@
 }
 
 .form{
+    font-size: 0;
+    white-space: nowrap;
 
 	&__input{
 		.form-control;
+        font-size: 14px;
 		box-sizing: border-box;
-		float: left;
+		display: inline-block;
 		width: 230px;
+        vertical-align: middle;
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
 	}
 
 	&__btn{
-		float: left;
 		.withSprite(6px, 11px, -200px 0, 50%, 50%);
+        display: inline-block;
+        vertical-align: middle;
 		&:after{
 			margin: -5.5px 0 0 -3px;
 		}
@@ -285,6 +300,8 @@
 	padding: 45px 0 0;
 
 	&__logo{
+        width: 192px;
+        height: 192px;
 		display: block;
 		margin: 0 auto;
 	}
@@ -311,7 +328,6 @@
 
 .pin{
 
-	padding: 45px 0 0;
 	text-align: center;
 
 	&__user{
@@ -329,11 +345,12 @@
 	text-align: center;
 
 	&__img{
-
+        width: 147px;
+        height: 165px;
 	}
 
 	&__email{
-		font-size: 19px;
+		font-size: 16px;
 		color: @black;
 		padding: 12px 0 0;
 	}
@@ -349,6 +366,11 @@
 		margin: 0 auto;
 		position: relative;
 	}
+
+    &__users {
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
 	&__control{
 		position: absolute;
@@ -376,21 +398,27 @@
 		&:hover{
 			opacity: 0.7
 		}
+
+        &_disabled {
+            cursor: default;
+            opacity: 0.7;
+        }
 	}
 
 	&__user{
-		float: right;
-		cursor: pointer;
 		position: relative;
+        display: inline-block;
+        width: 240px;
+		cursor: pointer;
 		z-index: 1;
-
-		&:first-child{
-			float: left;
-		}
 	}
 
 	&__title{
 		padding: 40px 0 0;
 		text-align: center;
 	}
+
+    &__page_hidden {
+        display: none;
+    }
 }
