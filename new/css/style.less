@@ -271,19 +271,21 @@
 	}
 
 	&__btn{
-		.withSprite(6px, 11px, -200px 0, 50%, 50%);
-        display: inline-block;
+		display: inline-block;
         vertical-align: middle;
-		&:after{
-			margin: -5.5px 0 0 -3px;
-		}
+		background-position: 50% 50%;
+	  	background-repeat: no-repeat;
+	  	background-image: data-uri('../images/arrow-white.png');
 	}
 
 	&__button{
 		.btn;
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
-		background: @violet;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-image: data-uri('../images/arrow-white.png');
+		background-color: @violet;
 		text-indent: -9999px;
 		margin: 0;
 		width: 45px;
