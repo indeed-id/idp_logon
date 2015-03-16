@@ -9,3 +9,5 @@ recipes/tmp/
 
 /chef.tar.gz
 .chef/*
+
+phpserver.log
